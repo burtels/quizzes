@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ChrisBe’s Quiz Night</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <video id="bgVideo" autoplay muted loop playsinline></video>
+  <img id="bgImage" alt="" />
+  <div id="shade"></div>
+
+  <div id="topControls">
+    <button class="iconBtn" id="btnHome" title="Home">
+      <img src="./assets/home.png" alt="Home"
+           onerror="this.style.display='none'; this.parentElement.querySelector('.iconFallback').style.display='inline-block';">
+      <span class="iconFallback">HOME</span>
+    </button>
+  </div>
+
+  <div id="app">
+    <main id="main"></main>
+  </div>
+
+  <script>
+    window.QUIZ_INDEX = [];
+    window.QUIZ_STORE = {};
+  </script>
+  <script src="./quizzes/index.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
